@@ -1,0 +1,6 @@
+Flask
+requests
+beautifulsoup4
+selenium
+lxml
+sqlite3  # Optional, already included in Python

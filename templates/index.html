@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Court Data Fetcher</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Court Case Details Finder</h1>
+    <form action="/fetch" method="POST" class="form-card">
+
+      <label for="case_type">Case Type:</label>
+      <select name="case_type" required>
+        <option value="CS">CS - Civil Suit</option>
+        <option value="CR">CR - Criminal Revision</option>
+        <option value="CC">CC - Criminal Complaint</option>
+        <option value="MISC">MISC - Miscellaneous</option>
+        <option value="EXE">EXE - Execution</option>
+        <option value="NIA">NIA - Negotiable Instrument Act</option>
+        <option value="ARBTN">ARBTN - Arbitration</option>
+        <option value="Bail">Bail</option>
+        <option value="MACP">MACP - Motor Accident Claims</option>
+      </select>
+
+      <label for="case_number">Case Number:</label>
+      <input type="text" name="case_number" required>
+
+      <label for="filing_year">Filing Year:</label>
+      <input type="text" name="filing_year" required>
+
+      <button type="submit">🔍 Fetch Case Details</button>
+    </form>
+  </div>
+</body>
+</html>
